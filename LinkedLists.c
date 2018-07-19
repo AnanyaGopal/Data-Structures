@@ -76,8 +76,10 @@ void  reverse_list_poin(struct Node** ptrHead){
 		(*curr).next = prev;
 		prev = curr; 
 		curr = next;
-		printf("%d %d %d \n",(*prev).data, (*curr).data, (*next).data);
+		//printf("%d %d %d \n",(*prev).data, (*curr).data, (*next).data);
 	}
+	
+	*ptrHead = prev;
 }
 /*
 	Function to add a node at the head into a linked list;
@@ -303,6 +305,8 @@ void removeDuplicates_unsortedList(lnode* head){
 			else{
 				rollPtr = rollPtr->next;
 			}		
+			
+				
 		}
 		mainPtr = mainPtr->next;
 		
@@ -313,12 +317,18 @@ void removeDuplicates_unsortedList(lnode* head){
 
 int main(){
 	
-	
 	lnode* test = newNode(1);
+	populateList(test, 10);
+	printlist(test);
+	
+	reverse_list_poin(&test);
+	printlist(test);
+	/*
 	test->next = newNode(1);
 	
 	printlist(test);
 	removeDuplicates_unsortedList(test);
 	printlist(test);
+	*/
 	return 0;
 }
