@@ -1,4 +1,5 @@
 #include "tree.h"
+#include "../Queues/queue.h"
 
 int main(){
 	
@@ -29,6 +30,8 @@ int main(){
 	
 	PostOrder(root);
 	printf("\n");
+	
+
 	
 	//printf("Height: %d\n",getHeight(root));
 	return 0;

@@ -8,6 +8,11 @@ struct treeNode {
 	struct treeNode* right;
 };
 
+/*Vars defined in ../Queues/queue.h */
+extern int front;
+extern int rear;
+
+
 typedef struct treeNode tnode;
 tnode* newTnode(int data);
 void insert_into_BST(tnode** rootPtr, int data);
@@ -20,6 +25,7 @@ void Preorder(tnode* root);   // Depth first
 void PostOrder(tnode* root);  // Depth first
 void Inorder(tnode* root);	  // Depth first
 void levelOrder(tnode* root); // Breadth first
+
 
 tnode* newTnode(int data){
 	
@@ -134,9 +140,6 @@ void Preorder(tnode* root){
 
 void Inorder(tnode* root){
 	if(root==NULL) return;
-	
-	
-	
 	Inorder(root->left);
 	printf("%c ", root->val);
 	Inorder(root->right);
@@ -151,6 +154,7 @@ void PostOrder(tnode* root){
 	printf("%c ", root->val);
 	
 }
+	
 	
 void printTree(tnode* root){
 	if(root == NULL) return;

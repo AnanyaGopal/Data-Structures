@@ -27,10 +27,10 @@ Two implementations are discussed:
 * LinkedList Implentation of Queue
 - Array implementation does have a lot of space wastage.
 
-++ To add an element to the back of the queue (Enqueue) - Add element to the tail.
+++ To add an element to the back of the queue (Enqueue) - Add element to the tail. (Keep a pointer that's always pointing the tail)
 -- to dequeue, remove the head, and set head->next = head;
 ** To get the front: get the head value.
-** to get the back:  get the tail value.
+** to get the back:  get the tail value. (Keep a pointer that's always pointing the tail)
 */
 
 #include<stdio.h>
